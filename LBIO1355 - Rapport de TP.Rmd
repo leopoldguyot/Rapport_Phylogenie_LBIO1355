@@ -1,0 +1,65 @@
+---
+title: "LBIO1355 – Rapport de TP"
+author: "Gashi Vandenhove Elfie, Guyot Léopold, Hiernaux Stéphane"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+# Introduction
+
+Montrez-vous ingénieux, et trouvez des arguments scientifiques justifiant l’intérêt d’étudier la co-évolution entre les deux groupes, Eulophidae et Cassidinae. N’hésitez pas à surmonter et dépasser l’infatigable « dans le cadre du TP …, on nous a demandé de … ». Ce n’est en effet pas une justification correcte pour la réalisation de votre travail !
+
+Quelques points que vous pourriez retrouver dans l’introduction : justification de l’intérêt du travail, présentation des grandes lignes du rapport et du fil conducteur, quelques hypothèses préalables qui seront ou non vérifiées par vos analyses, etc.
+
+# Choix de marqueur pour les Eulophidae
+
+### Marqueur : 28S D2, ITS2 ou CytB ?
+### Justification :
+
+# Méthode de construction d’arbre Eulophidae (parasitoïdes)
+
+Soyez précis ! Méthode, modèle, … vous pouvez vous aider de captures d’écran. Pensez à justifier vos choix.
+
+# Méthode de construction d’arbre Cassidinae (hôtes)
+
+Soyez précis ! Méthode, modèle, … vous pouvez vous aider de captures d’écran. Pensez à justifier vos choix.
+
+# Arbre Eulophidae (parasitoïdes)
+
+### Format parenthétique :
+### Graphe :
+Soyez clairs / illustratifs. N’hésitez pas à remettre en forme via R, Powerpoint…
+
+### Discussion :
+Quelle fiabilité accordez-vous à votre arbre ? De quels regroupements êtes-vous sûrs ou les plus confiants ? Que proposeriez-vous pour améliorer votre résultat ?
+
+Discutez d’abord la topologie sans vous préoccuper des valeurs de bootstraps, puis en en tenant compte.
+
+# Arbre Cassidinae (hôtes)
+### Format parenthétique :
+### Graphe :
+Soyez clairs / illustratifs. N’hésitez pas à remettre en forme via R, Powerpoint…
+
+### Discussion :
+Quelle fiabilité accordez-vous à votre arbre ? De quels regroupements êtes-vous sûrs ou les plus confiants ? Que proposeriez-vous pour améliorer votre résultat ?
+
+Discutez d’abord la topologie sans vous préoccuper des valeurs de bootstraps, puis en en tenant compte.
+
+# Coévolution
+### Graphe (les deux arbres, et les liens entre eux) :
+Soyez clairs / illustratifs. N’hésitez pas à remettre en forme via R, Powerpoint…
+
+### Discussion :
+Y a-t-il selon vous coévolution ? Dans quelle mesure ?
+
+# Conclusion
+Soyez clairs, concis, synthétiques, cohérents, mais aussi exhaustifs ! La conclusion, c’est la fin de l’histoire, c’est la finalisation du travail. En tant que telle, elle se doit d’en rappeler tous les points importants, de les représenter de manière cohérente, et de montrer ce qu’il a apporté (ce que nous savons en plus et que nous ne savions pas au début). Éventuellement, cette conclusion peut également comprendre une critique constructive et des perspectives.
+
+# Références
+Attention au choix des références, ainsi qu’à la manière de les encoder !
+
+# Annexes
+Envoyer également les alignements au format FASTA.
