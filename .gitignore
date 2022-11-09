@@ -1,3 +1,10 @@
-LBIO1355.Rproj
+Rapport_Phylogenie_LBIO1355.Rproj
+Rapport_Phylogenie.Rproj
 .Rproj.user
 .Rhistory
+.RData
+latex_rapport/main.aux
+latex_rapport/main.bcf
+latex_rapport/main.run.xml
+latex_rapport/main.synctex.gz
+latex_rapport/main.log
