@@ -1,5 +1,6 @@
 library(seqinr)
-source("packages/retrieveseqs3.r")
+library(ape)
+
 
 Cassidinae_28S_D2 <- c("AY927699","AY927700","AY927701","AY927704","AY927708",
                        "AY927709","AY927710","AY927711","AY927712","AY927713",
@@ -31,8 +32,7 @@ Cassidinae_28S_D2_Names <- c("Agroiconota_propinqua","Acromis_sparsa",
                              "Xenocassis_ambita")
 
 
-seqs_Cassidinae_28S_D2 <-retrieveseqs3(Cassidinae_28S_D2,"genbank")
-
+seqs_Cassidinae_28S_D2 <- read.GenBank(Cassidinae_28S_D2, Cassidinae_28S_D2_Names, as.character = T)
 names(seqs_Cassidinae_28S_D2) <- Cassidinae_28S_D2_Names
 
 write.fasta(seqs_Cassidinae_28S_D2, Cassidinae_28S_D2_Names, file="Cassidinae_28S_D2.fasta")
