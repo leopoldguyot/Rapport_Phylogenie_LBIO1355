@@ -1,5 +1,7 @@
 library(seqinr)
 library(ape)
+?source
+source("seqs.R")
 
 
 Cassidinae_28S_D2 <- c("AY927699","AY927700","AY927701","AY927704","AY927708",
