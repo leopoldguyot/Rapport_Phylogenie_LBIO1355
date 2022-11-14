@@ -1,81 +1,66 @@
-library(seqinr)
 library(ape)
-?source
 source("seqs.R")
 
+# Cassidinae (hôtes) :
+######################Cassidinae_28S_D2#########################
+seqs_Cassidinae_28S_D2 <- read.GenBank(Cassidinae_28S_D2, 
+                                       Cassidinae_28S_D2_names,
+                                       as.character = T)
+names(seqs_Cassidinae_28S_D2) <- Cassidinae_28S_D2_names
 
-Cassidinae_28S_D2 <- c("AY927699","AY927700","AY927701","AY927704","AY927708",
-                       "AY927709","AY927710","AY927711","AY927712","AY927713",
-                       "AY927714","AY927716","AY927717","AY927718","AY927719",
-                       "AY927720","AY927723","AY927724","AY927725","AY927726",
-                       "AY927727","AY927728","AY927729","AY927730","AY927732",
-                       "AY927734","AY927736","AY927737","AY927738","AY927739",
-                       "AY927740","AY927742","AY927741")
+write.fasta(seqs_Cassidinae_28S_D2, Cassidinae_28S_D2_names,
+            file="data_output/Cassidinae_28S_D2.fasta")
 
-
-Cassidinae_28S_D2_Names <- c("Agroiconota_propinqua","Acromis_sparsa",
-                             "Chelymorpha_alternans","Charidotis_abrupta",
-                             "Charidotella_proxima","Charidotella_sexpunctata",
-                             "Charidotella_sinuata","Charidotella_ventricosa",
-                             "Charidotis_vitreata","Charidotella_zona",
-                             "Cistudinella_foveolata","Deloyala_guttata",
-                             "Discomorpha_salvini","Hilarocassis_evanida",
-                             "Hybosa_mellicula","Imatidium_thoracicum",
-                             "Microctenochira_cumulata","Metrionella_erratica",
-                             "Microctenochira_flavonotata",
-                             "Microctenochira_fraterna",
-                             "Microctenochira_nigrocincta",
-                             "Microctenochira_sp1","Microctenochira_sp2",
-                             "Microctenochira_nr_nigrocincta",
-                             "Omaspides_bistriata","Polychalma_multicava",
-                             "Paraselenis_tersa","Spaethiella_species",
-                             "Stolas_extricata","Stolas_lebasii",
-                             "Stolas_pictilis","Tapinaspis_waesmali",
-                             "Xenocassis_ambita")
+#Alignement
+dnabin_Cassidinae_28S_D2 <- as.DNAbin(seqs_Cassidinae_28S_D2)
+muscle(dnabin_Cassidinae_28S_D2, exec = "muscle",
+       MoreArgs = "", quiet = TRUE,
+       file = "data_output/Cassidinae_28S_D2_align.fasta")
 
 
-seqs_Cassidinae_28S_D2 <- read.GenBank(Cassidinae_28S_D2, Cassidinae_28S_D2_Names, as.character = T)
-names(seqs_Cassidinae_28S_D2) <- Cassidinae_28S_D2_Names
+# Eulophidae (parasitoïdes)
+####################### 28S D2 #########################
+seqs_Eulo_28S_D2 <- read.GenBank(Eulo_28S_D2,
+                                 Eulo_28S_D2_names,
+                                 as.character = T)
+names(seqs_Eulo_28S_D2) <- Eulo_28S_D2_names
 
-write.fasta(seqs_Cassidinae_28S_D2, Cassidinae_28S_D2_Names, file="Cassidinae_28S_D2.fasta")
+write.fasta(seqs_Eulo_28S_D2, Eulo_28S_D2_names,
+            file="data_output/Eulo_28S_D2.fasta")
+
+#alignement
+dnabin_Eulo_28S_D2 <- as.DNAbin(seqs_Eulo_28S_D2)
+muscle(dnabin_Eulo_28S_D2, exec = "muscle",
+       MoreArgs = "", quiet = TRUE,
+       file = "data_output/Eulo_28S_D2_align.fasta")
+
+###################### ITS2 ##########################
+seqs_Eulo_ITS2 <- read.GenBank(Eulo_ITS2, 
+                               Eulo_ITS2_names,
+                                       as.character = T)
+names(seqs_Eulo_ITS2) <- Eulo_ITS2_names
+
+write.fasta(seqs_Eulo_ITS2, Eulo_ITS2_names,
+            file="data_output/Eulo_ITS2.fasta")
+
+#alignement
+dnabin_Eulo_ITS2 <- as.DNAbin(seqs_Eulo_ITS2)
+muscle(dnabin_Eulo_ITS2, exec = "muscle",
+       MoreArgs = "", quiet = TRUE,
+       file = "data_output/Eulo_ITS2_align.fasta")
 
 
-Eulo_28S_D2 <- c("AY771681","AY771698","AY771696","AY771696","AY771682",
-                 "AY771682","AY771683","AY771683","AY771685","AY771684",
-                 "AY771686","AY771686","AY771687","AY771688","AY771688",
-                 "AY771689","AY771689","AY771689","AY771689","AY771689",
-                 "AY771690","AY771691","AY771697","AY771697","AY771692",
-                 "AY771693","AY771694","AY771695","AY771701","AY771699",
-                 "AY771700","AY771702")
+##################### Cytochrome b ####################
+seqs_Eulo_Cyt_b <- read.GenBank(Eulo_Cyt_b, 
+                                Eulo_Cyt_b_names,
+                                as.character = T)
+names(seqs_Eulo_Cyt_b) <- Eulo_Cyt_b_names
 
-Eulo_28S_D2_Names <- c("Emersonella_albicoxa","Emersonella_carballoi",
-                       "Emersonella_cuignetae_subtype1",
-                       "Emersonella_cuignetae_subtype2",
-                       "Emersonella_horismenoides_sub1",
-                       "Emersonella_horismenoides_sub2",
-                       "Emersonella_niveipes_subtype1",
-                       "Emersonella_niveipes_subtype2",
-                       "Emersonella_nr_carballoi",
-                       "Emersonella_nr_hastata",
-                       "Emersonella_planiceps_subtype1",
-                       "Emersonella_planiceps_subtype2",
-                       "Emersonella_planiscuta","Emersonella_pubipennis_sub1",
-                       "Emersonella_pubipennis_sub2",
-                       "Emersonella_rotunda_subtype1",
-                       "Emersonella_rotunda_subtype2",
-                       "Emersonella_rotunda_subtype3",
-                       "Emersonella_rotunda_subtype4",
-                       "Emersonella_rotunda_subtype5",
-                       "Emersonella_species1","Emersonella_species2",
-                       "Emersonella_species3_subtype1",
-                       "Emersonella_species3_subtype2","Emersonella_species4",
-                       "Emersonella_tanigaster","Emersonella_varicolor",
-                       "Emersonella_windsori","Horismenus_species1",
-                       "Horismenus_species5","Horismenus_species6",
-                       "Signiphoridae_species1")
+write.fasta(seqs_Eulo_Cyt_b, Eulo_Cyt_b_names,
+            file="data_output/Eulo_Cyt_b.fasta")
 
-seqs_Eulo_28S_D2 <-retrieveseqs3(Eulo_28S_D2,"genbank")
-
-names(seqs_Eulo_28S_D2) <- Eulo_28S_D2_Names
-
-write.fasta(seqs_Eulo_28S_D2, Eulo_28S_D2_Names, file="Eulo_28S_D2.fasta")
+#alignement
+dnabin_Eulo_Cyt_b <- as.DNAbin(seqs_Eulo_Cyt_b)
+muscle(dnabin_Eulo_Cyt_b, exec = "muscle",
+       MoreArgs = "", quiet = TRUE,
+       file = "data_output/Eulo_Cyt_b_align.fasta")

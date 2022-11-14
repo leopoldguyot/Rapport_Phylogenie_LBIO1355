@@ -9,7 +9,7 @@ Cassidinae_28S_D2 <- c("AY927699","AY927700","AY927701","AY927704","AY927708",
                        "AY927740","AY927742","AY927741")
 
 
-Cassidinae_28S_D2_Names <- c("Agroiconota_propinqua","Acromis_sparsa",
+Cassidinae_28S_D2_names <- c("Agroiconota_propinqua","Acromis_sparsa",
                              "Chelymorpha_alternans","Charidotis_abrupta",
                              "Charidotella_proxima","Charidotella_sexpunctata",
                              "Charidotella_sinuata","Charidotella_ventricosa",
