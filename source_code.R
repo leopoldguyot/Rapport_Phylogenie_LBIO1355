@@ -1,6 +1,25 @@
 library(ape)
+library(seqinr)
 source("seqs.R")
 
+#function :
+alignement <- function(title,code, name){
+  seqs <- read.GenBank(code, 
+                       name,
+                       as.character = T)
+  names(seqs) <- name
+  
+  write.fasta(seqs, name,
+              file="data_output/" + title + ".fasta")
+  
+  #Alignement
+  dnabin_seqs <- as.DNAbin(seqs)
+  muscle(dnabin_seqs, exec = "muscle",
+         MoreArgs = "", quiet = TRUE,
+         file = "data_output/" + title + "_align.fasta")
+}
+
+alignement("Cassidinae_28S_D28test", Cassidinae_28S_D2, Cassidinae_28S_D2_names)
 # Cassidinae (hôtes) :
 ######################Cassidinae_28S_D2#########################
 seqs_Cassidinae_28S_D2 <- read.GenBank(Cassidinae_28S_D2, 
