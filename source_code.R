@@ -27,3 +27,19 @@ for (x in list){
   alignement(x)
 }
 
+
+#trees ploting
+
+Cassidinae_28S_D2_PhyML_JC69 <- read.tree("trees/Cassidinae_28S_D2_PhyML_JC69.tre")
+plot.phylo(Cassidinae_28S_D2_PhyML_JC69, show.node.label = TRUE)
+
+Eulo_28S_D2_PhyML_JC69 <- read.tree("trees/Eulo_28S_D2_PhyML_JC69.tre")
+plot.phylo(Eulo_28S_D2_PhyML_JC69, show.node.label = TRUE)
+
+Eulo_ITS2_PhyML_JC69 <- read.tree("trees/Eulo_ITS2_PhyML_JC69.tre")
+plot.phylo(Eulo_ITS2_PhyML_JC69, show.node.label = TRUE)
+
+Eulo_Cyt_b_PhyML_JC69 <- read.tree("trees/Eulo_Cyt_b_PhyML_JC69.tre")
+plot.phylo(Eulo_Cyt_b_PhyML_JC69, show.node.label = TRUE)
+
+
