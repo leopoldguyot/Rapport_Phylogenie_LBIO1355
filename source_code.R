@@ -1,5 +1,6 @@
 library(ape)
 library(seqinr)
+library(phytools)
 
 
 #function :
@@ -55,3 +56,13 @@ nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
 Eulo_Cyt_b_PhyML_JC69 <- read.tree("trees/Eulo_Cyt_b_PhyML_GTR_modified")
 plot.phylo(Eulo_Cyt_b_PhyML_JC69, "t", cex = 0.9, no.margin = TRUE, use.edge.length=FALSE, show.node.label = T)
 nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
+
+
+
+#matrix :
+
+association <- cbind(c("Aprostocetus_sp","Emersonella_albicoxa","Emersonella_carballoi", "Emersonella_cuignetae_subtype1","Emersonella_horismenoides_sub1","Emersonella_niveipes_sub1","Emersonella_niveipes_sub1","Emersonella_niveipes_sub1"),
+                     c("Discomorpha_salvini","Hilarocassis_evanida","Deloyala_guttata","Chelymorpha_alternans", "Cistudinella_foveolata", "Chelymorpha_alternans","Stolas_pictilis","Hilarocassis_evanida"))
+
+x <- cophylo(Eulo_Cyt_b_PhyML_JC69, Cassidinae_28S_D2_PhyML_JC69, assoc = association, space = 20, rotate=T, use.edge.length=FALSE) 
+plot(x)
