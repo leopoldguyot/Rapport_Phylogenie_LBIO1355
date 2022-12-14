@@ -31,7 +31,11 @@ for (x in list){
 #trees ploting
 
 Cassidinae_28S_D2_PhyML_JC69 <- read.tree("trees/Cassidinae_28S_D2_PhyML_JC69.tre")
-plot.phylo(Cassidinae_28S_D2_PhyML_JC69, "t", cex = 0.9 )
+plot.phylo(Cassidinae_28S_D2_PhyML_JC69, "t", cex = 0.9, no.margin = TRUE )
+nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
+
+Cassidinae_28S_D2_PhyML_JC69 <- read.tree("trees/Cassidinae_28S_D2_PhyML_GTR")
+plot.phylo(Cassidinae_28S_D2_PhyML_JC69, "t", cex = 0.9, no.margin = TRUE )
 nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
 
 Eulo_28S_D2_PhyML_JC69 <- read.tree("trees/Eulo_28S_D2_PhyML_JC69.tre")
@@ -41,5 +45,9 @@ Eulo_ITS2_PhyML_JC69 <- read.tree("trees/Eulo_ITS2_PhyML_JC69.tre")
 plot.phylo(Eulo_ITS2_PhyML_JC69, show.node.label = TRUE)
 
 Eulo_Cyt_b_PhyML_JC69 <- read.tree("trees/Eulo_Cyt_b_PhyML_JC69.tre")
-plot.phylo(Eulo_Cyt_b_PhyML_JC69, "t", cex = 0.9)
+plot.phylo(Eulo_Cyt_b_PhyML_JC69, "t", cex = 0.9, no.margin = TRUE)
+nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
+
+Eulo_Cyt_b_PhyML_JC69 <- read.tree("trees/Eulo_Cyt_b_PhyML_GTR")
+plot.phylo(Eulo_Cyt_b_PhyML_JC69, "t", cex = 0.9, no.margin = TRUE)
 nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
