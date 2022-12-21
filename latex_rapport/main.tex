@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
 \usepackage[utf8]{inputenc}
 
@@ -17,6 +17,17 @@
 \usepackage{biblatex}
 
 \usepackage{csquotes}
+\usepackage{listings}
+
+\newenvironment{simplechar}{%
+   \catcode`\$=12
+   \catcode`\&=12
+   \catcode`\#=12
+   \catcode`\^=12
+   \catcode`\_=12
+   \catcode`\~=12
+   \catcode`\%=12
+}{}
 
 \addbibresource{references.bib}
 
@@ -83,11 +94,18 @@ Le but de ce rapport est de prouver la coévolution entre nos deux familles en o
 
 \section{Arbre Eulophidae (parasitoïdes)}
 \subsection{Format parenthétique} 
-$((Signiphoridae_species1:0.015285,Signiphoridae_species2:0.128462):1.46985,(Horismenus_species3:0.221766,(((Horismenus_species5:0.019111,Horismenus_species6:0.05062)72:0.067935,(Horismenus_species1:0.144536,Horismenus_species2:0.156884)96:0.164364)68:0.061764,((Emersonella_tanigaster:0.092657,(((Emersonella_carballoi:0.026058,Emersonella_nr_carballoi:0.014511)99:0.099119,(Emersonella_albicoxa:0.121503,(Emersonella_rotunda_subtype1:0,(Emersonella_rotunda_subtype3:0.025135,Emersonella_rotunda_subtype2:0.0003)53:0.004206)98:0.069929)72:0.015958)49:0.021809,((Emersonella_niveipes_sub1:0.092929,Emersonella_niveipes_sub2:0.054961)96:0.092457,((Emersonella_varicolor:0.218957,((Emersonella_planiceps_subtype1:0.011964,Emersonella_planiceps_subtype2:0)100:0.060833,(Emersonella_species3_subtype1:0.018041,Emersonella_species3_subtype2:0.068031)99:0.101026)69:0.021096)61:0.0243,(Emersonella_rotunda_subtype4:0.146251,Emersonella_rotunda_subtype5:0.097387)16:0.016969)47:0)40:0.00721)67:0.017421)72:1e-06,((((Emersonella_reticulata:0.217408,Emersonella_windsori:0.201281)41:0.0354,(Emersonella_nr_hastata:0.247184,(Emersonella_planiscuta:0.292321,(Emersonella_horismenoides_sub2:0.078355,(Emersonella_horismenoides_sub1:0,Emersonella_species4:0.018414)94:0.047046)94:0.080812)79:0.067887)70:0.030555)60:0.022807,(Emersonella_pubipennis_sub1:0,Emersonella_pubipennis_sub2:0.01323)100:0.16614)59:0.015063,(Emersonella_species2:0.319133,(Emersonella_species1:0.050373,((Emersonella_cuignetae_subtype1:0.006681,Emersonella_cuignetae_subtype2:0.024551)90:0.005161,Aprostocetus_sp:3.67715)62:0.063493)62:0.09989)79:0.066898)59:0.115077)72:0.188936)95:0.086078):0.0773606)73;
-$
+\begin{simplechar}
+((Signiphoridae_species1: 0.015285,Signiphoridae_species2: 0.128462):1.46985,(Horismenus_species3: 0.221766,(((Horismenus_species5: 0.019111,Horismenus_species6: 0.05062)72: 0.067935,(Horismenus_species1: 0.144536,Horismenus_species2: 0.156884)96: 0.164364)68: 0.061764,((Emersonella_tanigaster: 0.092657,(((Emersonella_carballoi: 0.026058,Emersonella_nr_carballoi: 0.014511)99: 0.099119,  (Emersonella_albicoxa: 0.121503, (Emersonella_rotunda_subtype1: 0,(Emersonella_rotunda_subtype3: 0.025135,Emersonella_rotunda_subtype2: 0.0003)53:0.004206)98: 0.069929)72:0.015958)49: 0.021809,((Emersonella_niveipes_sub1: 0.092929,Emersonella_niveipes_sub2: 0.054961)96:0.092457,((Emersonella_varicolor: 0.218957, ((Emersonella_planiceps_subtype1: 0.011964 , Emersonella_planiceps_subtype2: 0)100: 0.060833,(Emersonella_species3_subtype1: 0.018041,Emersonella_species3_subtype2: 0.068031)99:0.101026)69: 0.021096)61: 0.0243,(Emersonella_rotunda_subtype4: 0.146251,Emersonella_rotunda_subtype5: 0.097387)16: 0.016969)47: 0)40:0.00721)67: 0.017421)72: 1e-06,((((Emersonella_reticulata:0.217408,Emersonella_windsori: 0.201281)41: 0.0354,(Emersonella_nr_hastata:0.247184,(Emersonella_planiscuta: 0.292321,(Emersonella_horismenoides_sub2: 0.078355,(Emersonella_horismenoides_sub1: 0,Emersonella_species4: 0.018414)94:0.047046)94: 0.080812)79: 0.067887)70: 0.030555)60: 0.022807,(Emersonella_pubipennis_sub1: 0,Emersonella_pubipennis_sub2: 0.01323)100: 0.16614)59: 0.015063,(Emersonella_species2: 0.319133,(Emersonella_species1: 0.050373,((Emersonella_cuignetae_subtype1: 0.006681,Emersonella_cuignetae_subtype2: 0.024551)90: 0.005161,Aprostocetus_sp:3.67715)62: 0.063493)62: 0.09989)79: 0.066898)59: 0.115077)72: 0.188936)95: 0.086078): 0.0773606)73;
+\end{simplechar}
 \subsection{Graphe :}
 
-\includegraphics[width = 1\textwidth]{plot_Eulo_Cyt_b_PhyML_GTR_modified.pdf}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{plot_Eulo_Cyt_b_PhyML_GTR_modified.pdf}
+    \caption{\small Arbre phylogénétique des Eulophidae.}
+    \label{Eulo_tree}
+\end{figure}
+
 \subsection{Discussion}
 Tout d’abord, nous pouvons observer que l’outgroup, composé de deux espèces de Signiphoridae, est bel et bien séparé des autres espèces.
 
@@ -104,9 +122,19 @@ Le fait que les valeurs bootstrap soient aussi peu convaincantes peut être expl
 \section{Arbre Cassidinae (hôtes)}
 \subsection{Format parenthétique} 
 
+\begin{simplechar}
 
+(Imatidium_thoracicum: 0.146486,((Stolas_lebasii: 0.016522,(Chelymorpha_alternans: 0.015659,(Stolas_extricata: 0.003157,Stolas_pictilis: 0.012136) 94:0.016166)73:0.007367) 68:5e-06,(((Acromis_sparsa: 0.020685,Paraselenis_tersa: 0.039344)64: 0.007934,(Hilarocassis_evanida: 0.045517,Omaspides_bistriata:0.024575)49:0.005353)82: 0.00954,(Polychalma_multicava: 0.054057,( Cistudinella_foveolata: 0.008476,(((Discomorpha_salvini: 0.027913,Hybosa_mellicula: 0.003428)27: 0.002709,(Spaethiella_species: 0.094631, (Deloyala_guttata:0.08459,Charidotis_abrupta: 0.024331)37: 0.01193)31:0)47: 0.006152,(Charidotis_vitreata:0.018956,(((Microctenochira_fraterna: 0.00735, Microctenochira_nigrocincta: 0)79: 0.002648,(Microctenochira_flavonotata:0.003473,(Microctenochira_sp1: 0.009288, (Microctenochira_nr_nigrocincta: 0,(Microctenochira_cumulata:0,Microctenochira_sp2: 0.005312)51:0)86: 0.00253)93: 0.007396) 91: 0.007651) 92: 0.007457,(((Tapinaspis_waesmali: 0.006284,Xenocassis_ambita: 0.005787)96: 0.021262,(Charidotella_zona: 0.022445,(Agroiconota_propinqua:0.016089,Metrionella_erratica: 0.012801)44: 1e-06)52: 0.007592)75: 0.012014,(Charidotella_ventricosa: 0.014347,(Charidotella_proxima: 0.01483,(Charidotella_sexpunctata: 0.006871,Charidotella_sinuata:1e-06)91: 0.013342)84: 0.018608)95: 0.012519)96: 0.016393)95: 0.014759)47:0.015593)67: 0.004068)68:0.00274)60: 0.005582)68: 0.020567): 0.010858);
+\end{simplechar}
 \subsection{Graphe :}
-\includegraphics[width = 1\textwidth]{plot_Cassidinae_28S_D2_PhyML_GTR.pdf}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{plot_Cassidinae_28S_D2_PhyML_GTR.pdf}
+    \caption{\small Arbre phylogénétique des Cassadinae.}
+    \label{Cassi_tree}
+\end{figure}
+
 \subsection{Discussion}
 \emph{Quelle fiabilité accordez-vous à votre arbre ? De quels regroupements êtes-vous sûrs ou les plus confiants ? Que proposeriez-vous pour améliorer votre résultat ?}
 \emph{
