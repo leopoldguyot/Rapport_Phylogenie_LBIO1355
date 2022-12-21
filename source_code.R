@@ -1,6 +1,8 @@
 library(ape)
 library(seqinr)
 library(phytools)
+source(seqs)
+source("association.R")
 
 
 #function :
@@ -59,10 +61,22 @@ nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
 
 
 
+
+
+
+
+#final
+
+Cassidinae_28S_D2_PhyML_f <- read.tree("trees/Cassidinae_28S_D2_align-PhyML_tree_TBE.tre")
+plot.phylo(Cassidinae_28S_D2_PhyML_f, "t", cex = 0.9, no.margin = TRUE, use.edge.length=FALSE , show.node.label = T)
+nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
+
+Eulo_Cyt_b_PhyML_f <- read.tree("trees/Eulo_Cyt_b_align-PhyML_tree_TBE.tre")
+plot.phylo(Eulo_Cyt_b_PhyML_f, "t", cex = 0.9, no.margin = TRUE, use.edge.length=FALSE, show.node.label = T)
+nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
+
+source("association.R")
 #matrix :
-
-association <- cbind(c("Aprostocetus_sp","Emersonella_albicoxa","Emersonella_carballoi", "Emersonella_cuignetae_subtype1","Emersonella_horismenoides_sub1","Emersonella_niveipes_sub1","Emersonella_niveipes_sub1","Emersonella_niveipes_sub1"),
-                     c("Discomorpha_salvini","Hilarocassis_evanida","Deloyala_guttata","Chelymorpha_alternans", "Cistudinella_foveolata", "Chelymorpha_alternans","Stolas_pictilis","Hilarocassis_evanida"))
-
-x <- cophylo(Eulo_Cyt_b_PhyML_JC69, Cassidinae_28S_D2_PhyML_JC69, assoc = association, space = 20, rotate=T, use.edge.length=FALSE) 
+?cophylo
+x <- cophylo(Eulo_Cyt_b_PhyML_f, Cassidinae_28S_D2_PhyML_f, assoc = association, space = 2, rotate=T, use.edge.length=F) 
 plot(x)
