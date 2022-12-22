@@ -78,5 +78,5 @@ nodelabels(adj = -0.2, frame = "n", cex = 0.8, font = 2)
 source("association.R")
 #matrix :
 ?cophylo
-x <- cophylo(Eulo_Cyt_b_PhyML_f, Cassidinae_28S_D2_PhyML_f, assoc = association, space = 2, rotate=T, use.edge.length=F) 
+x <- cophylo(Eulo_Cyt_b_PhyML_f, Cassidinae_28S_D2_PhyML_f,type = "c", assoc = association, rotate=T, use.edge.length=F) 
 plot(x)

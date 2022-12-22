@@ -63,5 +63,4 @@ association <- cbind(c("Aprostocetus_sp","Emersonella_albicoxa",
                        "Discomorpha_salvini", "Spaethiella_species",
                        "Spaethiella_species", "Charidotis_abrupta"
                        ))                              
-x <- cophylo(Eulo_Cyt_b_PhyML_JC69, Cassidinae_28S_D2_PhyML_JC69, assoc = association, space = 2, rotate=T, use.edge.length=F) 
-plot(x)
+
